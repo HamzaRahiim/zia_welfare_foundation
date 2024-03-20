@@ -2,32 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.wrapper {
+  @apply max-w-screen-lg mx-auto h-screen flex flex-col;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.mainProp {
+  @apply flex justify-center items-center gap-x-5 border-b-2 border-yellow-900 py-1 hover:cursor-pointer;
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.email {
+  @apply border-r-2 text-stone-800 md:text-base text-sm border-orange-800 pr-4 hover:text-pink-800 flex items-center gap-x-2;
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.number {
+  @apply flex items-center gap-x-2 text-stone-800 md:text-base text-sm hover:text-pink-800;
+}
+.logohead {
+  @apply flex justify-between gap-x-12 items-center border-b-2 border-yellow-900 py-2;
+}
+.singlelink {
+  @apply border-r-2 border-orange-800 pr-12 hover:cursor-pointer hover:text-green-500;
+}
+.mobileNav {
+  @apply fixed left-0 top-0 w-[70%] h-full bg-slate-200/90 ease-in-out duration-500;
+}
+.singleMob {
+  @apply border-b-2 border-yellow-800 py-3;
 }
