@@ -1,18 +1,13 @@
-import Footer from "@/components/layouts/Footer";
-import Header from "@/components/layouts/Header";
+import Hero from "@/components/sections/Hero";
+import Target from "@/components/sections/Target";
 
 export default function Home() {
   return (
-    <main className="wrapper">
-      <nav>
-        <Header />
-      </nav>
-      <section className="flex-1">
-        <h1>I am main body</h1>
-      </section>
-      <footer>
-        <Footer />
-      </footer>
+    <main>
+      {/* hero section  */}
+      <Hero />
+      {/* target section  */}
+      <Target />
     </main>
   );
 }

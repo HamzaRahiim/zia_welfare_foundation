@@ -2,6 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 220.9 39.3% 11%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
 .wrapper {
   @apply max-w-screen-lg mx-auto h-screen flex flex-col;
 }
@@ -21,8 +93,44 @@
   @apply border-r-2 border-orange-800 pr-12 hover:cursor-pointer hover:text-green-500;
 }
 .mobileNav {
-  @apply fixed left-0 top-0 w-[70%] h-full bg-slate-200/90 ease-in-out duration-500;
+  @apply fixed left-0 top-0 w-[70%] h-full bg-slate-200/90 ease-in-out duration-500 z-50;
 }
 .singleMob {
   @apply border-b-2 border-yellow-800 py-3;
+}
+/* ************************** styling for hero section ******************************** */
+
+@media (min-width: 768px) {
+  .heroSection {
+    background-image: url("../images/clear_bg.png");
+    background-size: cover;
+    background-position: center;
+  }
+}
+.paragraph {
+  @apply bg-hero-section bg-no-repeat bg-cover bg-center md:bg-none mt-24 md:m-0;
+}
+.buttonStyle {
+  @apply text-white font-bold text-lg;
+}
+.buttonContainer {
+  @apply flex flex-col max-w-80 mx-auto my-8;
+}
+.rightParent {
+  @apply relative flex-1 order-first md:px-2 bg-green-300 md:bg-transparent;
+}
+.leftChild {
+  @apply flex md:py-4 md:gap-x-2 justify-between h-72 overflow-hidden;
+}
+.sideImages {
+  @apply rounded-full md:w-60 md:h-60 w-32 h-32 overflow-hidden;
+}
+.smTitle {
+  @apply text-3xl font-serif md:hidden text-center max-w-56 mx-auto text-white;
+}
+.imageHide {
+  @apply absolute top-1 md:static;
+}
+.bottomImage {
+  @apply absolute left-1/2 transform -translate-x-1/2 bottom-[-20%] md:static md:translate-x-0 md:transform-none flex justify-center;
 }

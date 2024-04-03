@@ -4,7 +4,7 @@ import { CiPhone } from "react-icons/ci";
 import { IoCloseSharp } from "react-icons/io5";
 import { CiMenuFries } from "react-icons/ci";
 import { useState } from "react";
-import zwf from "@/images/zwf.png";
+import zwf from "/public/zwf.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -56,7 +56,7 @@ const Header = () => {
           </li>
         </ul>
         <div
-          className="md:hidden pr-2 hover:cursor-pointer"
+          className="md:hidden pr-3 hover:cursor-pointer"
           onClick={handleNav}
         >
           <CiMenuFries />
