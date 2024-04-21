@@ -33,21 +33,29 @@ const Header = () => {
       {/* lower side  */}
       <div className="logohead">
         {/* logo  */}
-        <Image
-          src={zwf}
-          alt="logo"
-          width={100}
-          height={100}
-          className="w-14 h-10 pl-2"
-        />
+        <Link href={"/"}>
+          <Image
+            src={zwf}
+            alt="logo"
+            width={100}
+            height={100}
+            className="w-14 h-10 pl-2 hover:cursor-pointer"
+          />
+        </Link>
         {/* menu  */}
-        <ul className="hidden md:flex flex-1 justify-between">
-          <li className="singlelink">Home</li>
+        <ul className="hidden md:flex flex-1 justify-around">
+          <li className="singlelink">
+            <Link href={"/"}>Home</Link>
+          </li>
           <li className="singlelink">
             <Link href={"/about"}>About</Link>
           </li>
-          <li className="singlelink">Services</li>
-          <li className="singlelink">Media</li>
+          <li className="singlelink">
+            <Link href={"#service"}>Services</Link>
+          </li>
+          <li className="singlelink">
+            <Link href={"#media"}>Media</Link>
+          </li>
           <li className="singlelink">
             <Link href={"/contact"}>Contact Us</Link>
           </li>
