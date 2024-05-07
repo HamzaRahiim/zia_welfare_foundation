@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+ 
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -77,6 +77,12 @@
 .wrapper {
   @apply max-w-screen-xl mx-auto;
 }
+.wrapperSmall {
+  @apply max-w-screen-sm mx-auto
+}
+.wrapperMedium {
+  @apply max-w-screen-lg mx-auto 
+}
 .mainProp {
   @apply flex justify-center items-center gap-x-5 border-b-2 border-yellow-900 py-1 hover:cursor-pointer;
 }
@@ -90,7 +96,10 @@
   @apply flex justify-between gap-x-12 items-center border-b-2 border-yellow-900 py-2;
 }
 .singlelink {
-  @apply border-r-2 border-orange-800 pr-12 hover:cursor-pointer hover:text-green-500;
+  @apply hover:cursor-pointer hover:text-green-500;
+}
+.singleRight {
+  @apply border-r-2 border-orange-800 
 }
 .mobileNav {
   @apply fixed left-0 top-0 w-[70%] h-full bg-slate-200/90 ease-in-out duration-500 z-50;

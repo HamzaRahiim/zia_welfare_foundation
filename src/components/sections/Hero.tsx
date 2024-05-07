@@ -45,7 +45,7 @@ const Hero = () => {
             <button className="hover:scale-105 duration-500">
               <Button
                 text="Donate Us"
-                link="/contact"
+                link="/bank"
                 css="bg-red-500 text-white text-lg hover:bg-red-300 hover:text-red-600"
               />
             </button>

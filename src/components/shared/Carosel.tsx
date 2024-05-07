@@ -11,10 +11,11 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
+import Link from "next/link";
 
 const Carosel = () => {
   return (
-    <Carousel plugins={[Autoplay({ delay: 2000 })]}>
+    <Carousel plugins={[Autoplay({ delay: 5000 })]}>
       <CarouselContent>
         <CarouselItem>
           <Image
@@ -32,7 +33,7 @@ const Carosel = () => {
               repellendus neque aperiam animi?{" "}
             </p>
             <button className="text-white px-4 py-2 rounded-lg border border-amber-700 hover:text-amber-200 hover:bg-amber-700 duration-500 hover:scale-105">
-              Discover More
+              <Link href="/about">Discover More</Link>
             </button>
           </div>
         </CarouselItem>

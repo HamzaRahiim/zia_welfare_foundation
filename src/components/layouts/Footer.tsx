@@ -12,13 +12,15 @@ const Footer = () => {
       {/* left side  */}
       {/* logo  */}
       <div className="md:w-[30%] flex md:flex-col flex-row">
-        <Image
-          src={zwf}
-          alt="zwf"
-          width={100}
-          height={100}
-          className="md:w-32 md:h-32 md:m-10 md:mb-0 w-20 h-20 mt-4"
-        />
+        <Link href={"/"}>
+          <Image
+            src={zwf}
+            alt="zwf"
+            width={100}
+            height={100}
+            className="md:w-32 md:h-32 md:m-10 md:mb-0 w-20 h-20 mt-4"
+          />
+        </Link>
         {/* social media  */}
         <ul className="flex pb-4 md:flex-row flex-col mt-4 md:m-0 md:mb-5 md:max-w-32 justify-around pl-8">
           <li className="text-blue-700 hover:cursor-pointer">
@@ -49,7 +51,7 @@ const Footer = () => {
             <Link href={"/about"}>Introduction</Link>
           </li>
           <li>
-            <Link href={"/about"}>Chairman Message</Link>
+            <Link href={"/about"}>CEO Message</Link>
           </li>
           <li>
             <Link href={"/about"}>Annual Report</Link>
@@ -62,10 +64,14 @@ const Footer = () => {
           Expolre
         </h1>
         <ul className="md:space-y-4 text-white hover:cursor-pointer flex md:flex-col gap-x-2">
-          <li>Our Mission</li>
-          <li>Media</li>
           <li>
-            <Link href={"/contact"}>Donation</Link>
+            <Link href={"#service"}>Our Mission</Link>
+          </li>
+          <li>
+            <Link href={"#media"}>Media</Link>
+          </li>
+          <li>
+            <Link href={"/bank"}>Donation</Link>
           </li>
         </ul>
       </div>

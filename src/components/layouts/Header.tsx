@@ -47,20 +47,25 @@ const Header = () => {
           <li className="singlelink">
             <Link href={"/"}>Home</Link>
           </li>
+          <span className="singleRight"></span>
           <li className="singlelink">
             <Link href={"/about"}>About</Link>
           </li>
+          <span className="singleRight"></span>
           <li className="singlelink">
             <Link href={"#service"}>Services</Link>
           </li>
+          <span className="singleRight"></span>
           <li className="singlelink">
             <Link href={"#media"}>Media</Link>
           </li>
-          <li className="singlelink">
+          <span className="singleRight"></span>
+          <li className="singlelin">
             <Link href={"/contact"}>Contact Us</Link>
           </li>
+          <span className="singleRight"></span>
           <li className="pr-2 hover:cursor-pointer hover:text-green-500">
-            <Link href={"/contact"}>Bank Details</Link>
+            <Link href={"/bank"}>Bank Details</Link>
           </li>
         </ul>
         <div
@@ -82,17 +87,23 @@ const Header = () => {
             <IoCloseSharp onClick={handleNav} size={30} />
           </div>
           <ul className="p-4 text-slate-700">
-            <li className="singleMob">Home</li>
+            <li className="singleMob">
+              <Link href={"/"}>Home</Link>
+            </li>
             <li className="singleMob">
               <Link href={"/about"}>About</Link>
             </li>
-            <li className="singleMob">Services</li>
-            <li className="singleMob">Media</li>
+            <li className="singleMob">
+              <Link href={"#service"}>Services</Link>
+            </li>
+            <li className="singleMob">
+              <Link href={"#media"}>Media</Link>
+            </li>
             <li className="singleMob">
               <Link href={"/contact"}>Contact Us</Link>
             </li>
             <li className="singleMob">
-              <Link href={"/contact"}>Bank Details</Link>
+              <Link href={"/bank"}>Bank Details</Link>
             </li>
           </ul>
         </div>
