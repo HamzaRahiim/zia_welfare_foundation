@@ -1,0 +1,5 @@
+1. Next time directly start from blog_data.ts file and [blogs]/page.tsx file for making blogs content
+2. then make this fully responsive after that
+3. Move towards making contact page 
+4. then converts this data to sanity for access
+5. In the last the call Z for making changes of data 
