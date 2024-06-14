@@ -1,33 +1,9 @@
 import Ytcomp from "@/components/shared/Ytcomp";
-import ytImage from "@/images/yt_image.png";
-const data = [
-  {
-    link: "https://youtu.be/U_Q_QtbRAfQ?si=iYRevvMDaDr7347N",
-    srcImage: ytImage,
-  },
-  {
-    link: "https://youtu.be/U_Q_QtbRAfQ?si=iYRevvMDaDr7347N",
-    srcImage: ytImage,
-  },
-  {
-    link: "https://youtu.be/U_Q_QtbRAfQ?si=iYRevvMDaDr7347N",
-    srcImage: ytImage,
-  },
-  {
-    link: "https://youtu.be/U_Q_QtbRAfQ?si=iYRevvMDaDr7347N",
-    srcImage: ytImage,
-  },
-  {
-    link: "https://youtu.be/U_Q_QtbRAfQ?si=iYRevvMDaDr7347N",
-    srcImage: ytImage,
-  },
-  {
-    link: "https://youtu.be/U_Q_QtbRAfQ?si=iYRevvMDaDr7347N",
-    srcImage: ytImage,
-  },
-];
+import { getVideoData } from "@/lib/VideoData";
+import VideoType from "@/type";
 
-const Media = () => {
+const Media = async () => {
+  const data: VideoType[] = await getVideoData();
   return (
     <section
       id="media"
@@ -40,7 +16,7 @@ const Media = () => {
       {/* yt components  */}
       {data.map((item, index) => (
         <div key={index} className="flex justify-center items-center">
-          <Ytcomp link={item.link} srcImage={item.srcImage} />
+          <Ytcomp link={item.videolink} srcImage={item.poster} />
         </div>
       ))}
     </section>

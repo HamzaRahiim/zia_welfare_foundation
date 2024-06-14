@@ -75,7 +75,7 @@
   }
 }
 .wrapper {
-  @apply max-w-screen-xl mx-auto;
+  @apply max-w-screen-xl mx-auto; 
 }
 .wrapperSmall {
   @apply max-w-screen-sm mx-auto

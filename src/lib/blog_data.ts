@@ -1,18 +1,27 @@
 const data = [
   {
     slug: "blog1",
-    title: "Blog 1",
-    content: "This is the content of blog 1",
+    title: "First Distribution Shoes In Amankot",
+    video:
+      "https://www.youtube.com/watch?si=iYRevvMDaDr7347N&v=U_Q_QtbRAfQ&feature=youtu.be",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum?",
   },
   {
     slug: "blog2",
-    title: "Blog 2",
-    content: "This is the content of blog 2",
+    title: "Second Distribution Clothes In Charsbagh",
+    video:
+      "https://www.youtube.com/watch?si=iYRevvMDaDr7347N&v=U_Q_QtbRAfQ&feature=youtu.be",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum?",
   },
   {
     slug: "blog3",
-    title: "Blog 3",
-    content: "This is the content of blog 3",
+    title: "Madrassa Sites Project In Village",
+    video:
+      "https://www.youtube.com/watch?si=iYRevvMDaDr7347N&v=U_Q_QtbRAfQ&feature=youtu.be",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum?",
   },
 ];
 

@@ -1,12 +1,11 @@
 "use client";
-import { CiMail } from "react-icons/ci";
-import { CiPhone } from "react-icons/ci";
 import { IoCloseSharp } from "react-icons/io5";
 import { CiMenuFries } from "react-icons/ci";
 import { useState } from "react";
 import zwf from "/public/zwf.png";
 import Image from "next/image";
 import Link from "next/link";
+import EmailComp from "@/components/shared/EmailComp";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
@@ -14,22 +13,7 @@ const Header = () => {
   return (
     <main className="flex flex-col">
       {/* upper side  */}
-      <div className="mainProp">
-        <Link href={"mailto:hamzarahim836@gmail.com"}>
-          <h1 className="email">
-            <CiMail />{" "}
-            <span className="hidden md:flex">hamzarahim836@gmail.com</span>
-            <span className="md:hidden">z..@..com</span>
-          </h1>
-        </Link>
-        <Link href={"whatsapp://send?phone=+923150311920"}>
-          <p className="number">
-            <CiPhone />{" "}
-            <span className="hidden md:flex">{"(+92) 315-0311920"}</span>
-            <span className="md:hidden">{"(+92)..20"}</span>
-          </p>
-        </Link>
-      </div>
+      {/* <EmailComp /> */}
       {/* lower side  */}
       <div className="logohead">
         {/* logo  */}
@@ -60,7 +44,7 @@ const Header = () => {
             <Link href={"#media"}>Media</Link>
           </li>
           <span className="singleRight"></span>
-          <li className="singlelin">
+          <li className="singlelink">
             <Link href={"/contact"}>Contact Us</Link>
           </li>
           <span className="singleRight"></span>

@@ -5,8 +5,13 @@ import { CiMail, CiPhone } from "react-icons/ci";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
-
-const Footer = () => {
+import { getSocialData } from "@/lib/socialData";
+import SocialMediaType from "@/type";
+import EmailType from "@/type";
+import { getEmailData } from "@/lib/emailData";
+const Footer = async () => {
+  const socialdata: SocialMediaType = await getSocialData();
+  const emailData: EmailType = await getEmailData();
   return (
     <main className="bg-gradient-to-r from-fuchsia-600/90 to-fuchsia-400 flex md:flex-row items-center flex-col px-2 md:p-0">
       {/* left side  */}
@@ -24,17 +29,17 @@ const Footer = () => {
         {/* social media  */}
         <ul className="flex pb-4 md:flex-row flex-col mt-4 md:m-0 md:mb-5 md:max-w-32 justify-around pl-8">
           <li className="text-blue-700 hover:cursor-pointer">
-            <Link href={""}>
+            <Link href={socialdata.facebook}>
               <FaFacebookSquare className="w-6 h-6 md:w-7 md:h-7" />
             </Link>
           </li>
           <li className="text-red-700 hover:cursor-pointer">
-            <Link href={""}>
+            <Link href={socialdata.youtube}>
               <FaYoutube className="w-6 h-6 md:w-7 md:h-7" />
             </Link>
           </li>
           <li className="text-pink-700 hover:cursor-pointer">
-            <Link href={""}>
+            <Link href={socialdata.instagram}>
               <FaInstagramSquare className="w-6 h-6 md:w-7 md:h-7" />
             </Link>
           </li>
@@ -85,22 +90,22 @@ const Footer = () => {
           quisquam,
         </p>
         <div className="flex gap-x-5 py-1 hover:cursor-pointer md:flex-col justify-center">
-          <Link href={"mailto:hamzarahim836@gmail.com"}>
+          <Link href={`mailto:${emailData.email}`}>
             <h1 className="email border-none pb-4">
               <CiMail className="text-blue-700 md:w-8 md:h-8" />{" "}
               <span className="hidden md:flex text-gray-600 overflow-hidden">
-                hamzarahim836@gmail.com
+                {emailData.email}
               </span>
-              <span className="md:hidden text-white">z..@..com</span>
+              <span className="md:hidden text-white">{emailData.emailMob}</span>
             </h1>
           </Link>
-          <Link href={"whatsapp://send?phone=+923150311920"}>
+          <Link href={`whatsapp://send?phone=+92${emailData.phone}`}>
             <p className="number pb-4">
               <CiPhone className="text-green-700 md:w-8 md:h-8" />{" "}
               <span className="hidden md:flex text-gray-600">
-                {"(+92) 315-0311920"}
+                {`(+92) ${emailData.phone}`}
               </span>
-              <span className="md:hidden text-white">{"(+92)..20"}</span>
+              <span className="md:hidden text-white">{emailData.phoneMob}</span>
             </p>
           </Link>
         </div>

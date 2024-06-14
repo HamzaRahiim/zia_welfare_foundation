@@ -18,7 +18,13 @@ const Comp = ({
           {text}
         </p>
       </div>
-      <Image src={photo} alt="Welfare" className="rounded-md" />
+      <Image
+        src={photo}
+        alt="Welfare"
+        className="rounded-md"
+        width={300}
+        height={300}
+      />
     </div>
   );
 };

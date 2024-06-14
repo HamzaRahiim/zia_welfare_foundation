@@ -34,3 +34,27 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Adding Sanity For Content Management:
+
+Follow This Easy Steps to add Sanity to youe nextjs project with pnpm:
+
+1. Enter this command in your project directory terminal.
+
+   pnpm create sanity@latest
+
+2. Set the configuration according to your project need.
+
+![alt text](image.png)
+
+3. Make Schema For your Project in the sanity directory along the src directory.
+
+4. Check the schema structure by visiting localhost:3000/studio url, and add this url in cros configuration from sanity.
+
+5. Add data from schema structure and then fetch it from vision option with GROQ query.
+
+6. Now make a new file where you want to fetch this data using that GROQ query.
+
+7. Import this data in your code project where you want to use it.
+
+8. In the last, configure data re-validation through GROQ query and set the time of fetching data.

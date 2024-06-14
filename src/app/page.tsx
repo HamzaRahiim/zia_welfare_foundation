@@ -3,6 +3,8 @@ import Media from "@/components/sections/Media";
 import Services from "@/components/sections/Services";
 import Target from "@/components/sections/Target";
 
+// export const revalidate = 60;
+
 export default function Home() {
   return (
     <main className="flex flex-col space-y-4 md:space-y-0 wrapper">
@@ -11,7 +13,7 @@ export default function Home() {
         <Hero />
       </div>
       {/* target section */}
-      <div className="md:order-first">
+      <div className="md:order-first md:overflow-hidden">
         <Target />
       </div>
       {/* service section  */}

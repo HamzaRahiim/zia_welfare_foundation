@@ -1,44 +1,30 @@
 import Image from "next/image";
-import ceoImage from "@/images/backgrond-remove.png";
-import ceoImage1 from "@/images/backgrond-remove1.webp";
 import team from "@/images/teammember.png";
-import Link from "next/link";
 import Blogg from "@/components/shared/Blog";
-const About = () => {
-  const slug = "hamza_blog";
+import { getCeoData } from "@/lib/ceoData";
+import AboutType from "@/type";
+import PortableText from "react-portable-text";
+
+const About = async () => {
+  const ceoData: AboutType = await getCeoData();
   return (
-    <main className="flex flex-col wrapperMedium mt-3">
+    <main className="flex flex-col wrapperMedium mt-3 px-2 md:px-0">
       {/* Ceo Section  */}
       {/* left side message */}
       <div className="flex md:flex-row flex-col">
         <div className="flex-1">
-          <h1 className="text-3xl md:flex hidden">Founder and CEO Message:</h1>
-          <p className="font-normal pt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-            modi quos, omnis, cumque ipsum excepturi ipsa sequi non laborum rem
-            sunt necessitatibus iste sit, deleniti repudiandae? Quaerat,
-            architecto quis? Nihil.Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Quisquam Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Commodi modi quos, omnis, cumque ipsum excepturi
-            ipsa sequi non laborum rem sunt necessitatibus iste sit, deleniti
-            repudiandae? Quaerat, architecto quis? Nihil.Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Quisquam quis? Nihil.Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Quisquam Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Commodi modi quos,
-            omnis, cumque ipsum excepturi ipsa sequi non laborum rem sunt
-            necessitatibus iste sit, deleniti repudiandae? Quaerat, architecto
-            quis? Nihil.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Quisquam consectetur adipisicing elit. Quisquam Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Commodi modi quos, omnis,
-            cumque ipsum excepturi ipsa sequi non laborum rem sunt
-            necessitatibus iste sit, deleniti repudiandae? Quaerat, architecto
-            quis? Nihil.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Quisquam
-          </p>
+          <h1 className="text-3xl md:flex hidden pb-2">{ceoData.title}</h1>
+          <PortableText content={ceoData.ceomessage} />
         </div>
         <div className="flex-1 flex flex-col justify-center order-first">
           <h1 className="text-3xl md:hidden">Founder and CEO Message:</h1>
-          <Image src={ceoImage1} alt="CEO" className="w-2/3 self-center" />
+          <Image
+            src={ceoData.imageName}
+            alt="CEO"
+            className="w-2/3 self-center"
+            width={100}
+            height={100}
+          />
         </div>
       </div>
       {/* right side picture */}
