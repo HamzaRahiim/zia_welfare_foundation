@@ -1,31 +1,23 @@
-const data = [
-  {
-    slug: "blog1",
-    title: "First Distribution Shoes In Amankot",
-    video:
-      "https://www.youtube.com/watch?si=iYRevvMDaDr7347N&v=U_Q_QtbRAfQ&feature=youtu.be",
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum?",
-  },
-  {
-    slug: "blog2",
-    title: "Second Distribution Clothes In Charsbagh",
-    video:
-      "https://www.youtube.com/watch?si=iYRevvMDaDr7347N&v=U_Q_QtbRAfQ&feature=youtu.be",
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum?",
-  },
-  {
-    slug: "blog3",
-    title: "Madrassa Sites Project In Village",
-    video:
-      "https://www.youtube.com/watch?si=iYRevvMDaDr7347N&v=U_Q_QtbRAfQ&feature=youtu.be",
-    content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia suscipit nostrum sit dolorem minima ad laborum, sed dignissimos quam facilis eum, harum voluptate. Adipisci ipsum hic itaque nisi laborum?",
-  },
-];
+import { client } from "../../sanity/lib/client";
 
-export const mainBlogData = async (slug: string) => {
-  const blog = data.find((blog) => blog.slug === slug);
-  return blog;
+export const getAboutBlogData = async () => {
+  const query = `*[_type == "aboutBlog"]{
+  title,
+  "slug": slug.current,
+  "blogImage": blogImage.asset -> url,
+  }`;
+  const data = await client.fetch(query);
+  return data;
+};
+
+export const getBlogData = async (slug: string) => {
+  const query = `*[_type == "aboutBlog" && slug.current == "${slug}"]{
+  description,
+  title,
+  "slug": slug.current,
+  "blogImage": blogImage.asset -> url,
+  videoUrl,
+  }[0]`;
+  const data = await client.fetch(query);
+  return data;
 };

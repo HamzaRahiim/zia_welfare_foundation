@@ -7,7 +7,14 @@ const AboutComp = ({
   bank,
   mainHeading,
   bgColor = "bg-blue-500",
-}: BankData) => {
+}: {
+  accountNumber: string;
+  accountTitle: string;
+  IBAN?: string;
+  bank?: string;
+  mainHeading: string;
+  bgColor?: string;
+}) => {
   let data = {
     accountNumber: accountNumber,
     accountTitle: accountTitle,

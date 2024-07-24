@@ -6,9 +6,9 @@ import EmailType from "@/type";
 const Contact = async () => {
   const emailData: EmailType = await getEmailData();
   return (
-    <main className="max-w-screen-md mx-auto flex flex-col md:flex-row my-12 gap-y-4">
+    <main className="max-w-screen-md mx-auto flex flex-col md:flex-row md:my-12 mb-12 gap-y-4">
       {/* left side text  */}
-      <section className="flex-1 md:border-r-2 md:border-black flex flex-col justify-center items-center">
+      <section className="max-w-screen-md mx-auto flex flex-col md:flex-row my-12 gap-y-4">
         {/* /I want to add space between the words GET IN Touch  */}
         <div className="md:ml-12">
           <h3 className="text-lg mb-4">GET IN TOUCH</h3>

@@ -1,7 +1,4 @@
 "use client";
-import image1 from "@/images/images1.webp";
-import image2 from "@/images/images2.webp";
-import image3 from "@/images/images3.webp";
 import {
   Carousel,
   CarouselContent,
@@ -12,45 +9,42 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import Link from "next/link";
-
+import { getCaroselData } from "@/lib/carosel_data";
+import CaroselType from "@/type";
+import { useEffect, useState } from "react";
 const Carosel = () => {
+  const [data, setData] = useState<CaroselType[]>([]);
+
+  const fetchData = async () => {
+    try {
+      const data: CaroselType[] = await getCaroselData();
+      setData(data);
+    } catch (error) {
+      console.error("Error fetching carousel data:", error);
+    }
+  };
+
   return (
     <Carousel plugins={[Autoplay({ delay: 5000 })]}>
       <CarouselContent>
-        <CarouselItem>
-          <Image
-            src={image1}
-            alt="imagesSliding"
-            className="h-96 md:h-[500px]"
-          />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center max-w-screen-sm space-y-4 hover:cursor-pointer">
-            <h1 className="text-white text-3xl md:text-5xl font-medium">
-              Helping Helpless
-            </h1>
-            <p className="text-sm text-white">
-              Join Us to Help Together and save the World, Lorem ipsum dolor
-              sit, amet consectetur adipisicing elit. Veniam delectus
-              repellendus neque aperiam animi?{" "}
-            </p>
-            <button className="text-white px-4 py-2 rounded-lg border border-amber-700 hover:text-amber-200 hover:bg-amber-700 duration-500 hover:scale-105">
-              <Link href="/about">Discover More</Link>
-            </button>
-          </div>
-        </CarouselItem>
-        <CarouselItem>
-          <Image
-            src={image2}
-            alt="imagesSliding"
-            className="h-96 md:h-[500px]"
-          />
-        </CarouselItem>
-        <CarouselItem>
-          <Image
-            src={image3}
-            alt="imagesSliding"
-            className="h-96 md:h-[500px]"
-          />
-        </CarouselItem>
+        {data.map((data, key) => (
+          <CarouselItem className="relative" key={key}>
+            <Image
+              src={data.mainImage}
+              width={1300}
+              height={500}
+              alt="imagesSliding"
+              className="h-96 md:h-[500px]"
+            />
+            <div className="caroselPost">
+              <h1 className="caroselMain">{data.title}</h1>
+              <p className="caroselParag">{data.description}</p>
+              <button className="caroselButt">
+                <Link href="/about">Discover More</Link>
+              </button>
+            </div>
+          </CarouselItem>
+        ))}
       </CarouselContent>
       <CarouselPrevious />
       <CarouselNext />

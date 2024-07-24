@@ -12,13 +12,10 @@ const Hero = () => {
       <div className="flex-1 mt-4 pl-2 md:order-first hover:cursor-text">
         {/* heading  */}
         <span className="text-3xl hidden md:grid font-serif text-zinc-700">
-          Welcome to{" "}
-          <h1 className="py-2 font-semibold bg-gradient-to-r bg-clip-text text-transparent from-slate-500 via-zinc-600 to-neutral-500">
-            ZIA WELFARE FOUNDATION
-          </h1>
+          Welcome to <h1 className="mainHeading">ZIA WELFARE FOUNDATION</h1>
         </span>
         {/* paragraph  */}
-        <p className="paragraph px-2 md:p-0">
+        <p className="paragraph px-2 md:p-0 line-clamp-[10]">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
           nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
           volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
@@ -27,11 +24,11 @@ const Hero = () => {
           molestie consequat, vel illum dolore eu feugiat nulla facilisis at
           vero eros et accumsan et iusto odio dignissim qui blandit praesent
           luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-          Lorem ipsum dolor sit amet. <br className="hidden md:grid" />
-          Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-          molestie consequat, vel illum dolore eu feugiat nulla facilisis at
-          vero eros et accumsan et iusto odio dignissim qui blandit praesent
-          luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+          Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in
+          hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+          eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
+          dignissim qui blandit praesent luptatum zzril delenit augue duis
+          dolore te feugait nulla facilisi.
         </p>
         {/* button  */}
         <div className="buttonContainer">
@@ -69,7 +66,9 @@ const Hero = () => {
           </div>
           <span className="smTitle">
             Welcome to{" "}
-            <h1 className="py-2 font-semibold">ZIA WELFARE FOUNDATION</h1>
+            <h1 className="py-2 font-semibold text-[#004d4e]">
+              ZIA WELFARE FOUNDATION
+            </h1>
           </span>
           {/* Right image */}
           <div className="-right-14 imageHide">

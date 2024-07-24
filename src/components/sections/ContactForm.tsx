@@ -74,7 +74,7 @@ function ProfileForm() {
   return (
     <Form {...form}>
       <form
-        className="space-y-5 md:ml-14 flex flex-col justify-center items-center"
+        className="space-y-5 md:ml-10 flex flex-col justify-center items-center md:border-l-2 md:border-black md:mt-10 md:mr-6 md:pl-6"
         onSubmit={handleSubmit(onSubmit)}
       >
         <FormField
@@ -131,7 +131,7 @@ function ProfileForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="h-10 rounded-md px-8 bg-green-500 hover:bg-green-700 md:self-start "
+          className="h-10 rounded-md px-8 bg-green-500 hover:bg-green-700 md:self-start md:ml-8"
         >
           {isSubmitting ? "Submiting..." : "Submit"}
         </Button>

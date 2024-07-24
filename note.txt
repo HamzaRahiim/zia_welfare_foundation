@@ -1,3 +1,1 @@
-// Process start from team scheme.
-// then blog
-// IN the last fix the email issue in navbar.
+// cmoplete now test the last things... check website from every directions

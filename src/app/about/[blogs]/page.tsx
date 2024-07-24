@@ -1,9 +1,12 @@
 import YtComp from "@/components/shared/Ytvideo";
-import { mainBlogData } from "@/lib/blog_data";
+import { getBlogData } from "@/lib/blog_data";
 import Link from "next/link";
 import { FaBackward } from "react-icons/fa";
+import BlogType from "@/type";
+import PortableText from "react-portable-text";
+
 const Blogs = async ({ params }: { params: { blogs: string } }) => {
-  const data = await mainBlogData(params.blogs);
+  const data: BlogType = await getBlogData(params.blogs);
   return (
     <main className="bg-clip-content bg-gradient-to-b from-zinc-100 via-fuchsia-100 to-fuchsia-200">
       <div className="max-w-screen-sm mx-auto">
@@ -18,18 +21,18 @@ const Blogs = async ({ params }: { params: { blogs: string } }) => {
         {/* main heading  */}
         <div>
           <h1 className="md:text-3xl text-2xl font-medium text-center">
-            {data?.title}
+            {data.title}
           </h1>
         </div>
         {/* youtube video  */}
         <div>
           <h1 className="font-medium text-lg mb-2">Project Overview:</h1>
-          <YtComp url={data?.video} />
+          <YtComp url={data.videoUrl} />
         </div>
         {/* main description */}
         <div>
           <h1 className="font-medium text-lg mb-2">Project Detail:</h1>
-          <p>{data?.content}</p>
+          <PortableText content={data.description} />
         </div>
       </section>
     </main>

@@ -1,13 +1,15 @@
-export default interface CopyData {
-  accountNumber: number;
+export default interface BankData {
+  accountNumber: string;
   accountTitle: string;
-  IBAN?: number;
-  bank?: string;
-}
-export default interface BankData extends CopyData {
   mainHeading: string;
+  IBAN?: string;
+  bank?: string;
   bgColor?: string;
 }
+// export default interface BankData extends CopyData {
+//   mainHeading: string;
+//   bgColor?: string;
+// }
 
 export default interface SocialMediaType {
   _id: string;
@@ -41,4 +43,25 @@ export default interface AboutType {
   ceomessage: any;
   ceoImage: string;
   title: string;
+}
+
+export default interface TeamType {
+  teamImage: string;
+}
+
+export default interface AboutBlogType {
+  title: string;
+  slug: string;
+  blogImage: string;
+}
+
+export default interface BlogType extends AboutBlogType {
+  description: any;
+  videoUrl: string;
+}
+
+export default interface CaroselType {
+  title: string;
+  description: string;
+  mainImage: any;
 }
