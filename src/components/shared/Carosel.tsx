@@ -9,21 +9,8 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import Link from "next/link";
-import { getCaroselData } from "@/lib/carosel_data";
 import CaroselType from "@/type";
-import { useEffect, useState } from "react";
-const Carosel = () => {
-  const [data, setData] = useState<CaroselType[]>([]);
-
-  const fetchData = async () => {
-    try {
-      const data: CaroselType[] = await getCaroselData();
-      setData(data);
-    } catch (error) {
-      console.error("Error fetching carousel data:", error);
-    }
-  };
-
+const Carosel = ({ data }: { data: CaroselType[] }) => {
   return (
     <Carousel plugins={[Autoplay({ delay: 5000 })]}>
       <CarouselContent>

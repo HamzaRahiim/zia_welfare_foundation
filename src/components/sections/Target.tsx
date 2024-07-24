@@ -1,6 +1,8 @@
 import Carosel from "@/components/shared/Carosel";
-
-const Target = () => {
+import { getCaroselData } from "@/lib/carosel_data";
+import CaroselType from "@/type";
+const Target = async () => {
+  const data: CaroselType[] = await getCaroselData();
   return (
     <section className="">
       {/* headline  */}
@@ -10,7 +12,7 @@ const Target = () => {
         </h1>
       </div>
       {/* sliding part  */}
-      <Carosel />
+      <Carosel data={data} />
     </section>
   );
 };
