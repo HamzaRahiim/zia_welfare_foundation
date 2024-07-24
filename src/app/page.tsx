@@ -3,7 +3,7 @@ import Media from "@/components/sections/Media";
 import Services from "@/components/sections/Services";
 import Target from "@/components/sections/Target";
 
-// export const revalidate = 60;
+export const revalidate = 172800;
 
 export default function Home() {
   return (

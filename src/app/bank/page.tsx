@@ -1,6 +1,7 @@
 import Image from "next/image";
 import bank from "@/images/bank.png";
 import AboutComp from "@/components/sections/About";
+export const revalidate = 172800;
 
 const Bank = () => {
   return (

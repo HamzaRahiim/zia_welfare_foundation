@@ -3,6 +3,9 @@ import { CiMail, CiPhone } from "react-icons/ci";
 import ProfileForm from "@/components/sections/ContactForm";
 import { getEmailData } from "@/lib/emailData";
 import EmailType from "@/type";
+
+export const revalidate = 172800;
+
 const Contact = async () => {
   const emailData: EmailType = await getEmailData();
   return (

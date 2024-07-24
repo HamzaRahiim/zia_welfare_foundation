@@ -6,7 +6,7 @@ import AboutType from "@/type";
 import TeamType from "@/type";
 import PortableText from "react-portable-text";
 
-// export const revalidate = 60;
+export const revalidate = 172800;
 
 const About = async () => {
   const ceoData: AboutType = await getCeoData();
