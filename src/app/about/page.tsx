@@ -30,7 +30,7 @@ const About = async () => {
           <Image
             src={ceoData.imageName}
             alt="CEO"
-            className="w-2/3 self-center"
+            className="w-2/3 self-center object-cover"
             width={100}
             height={100}
           />
